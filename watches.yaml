@@ -1,0 +1,8 @@
+---
+- version: v1alpha1
+  group: cache.example.com
+  kind: Memcached
+  #role: /opt/ansible/roles
+  #changing to current directory
+  #role: /home/adtaylor/labs/operators/ansible/memcached-operator/roles/dymurray.memcached_operator_role
+  role: /opt/ansible/roles/dymurray.memcached_operator_role
