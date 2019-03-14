@@ -65,4 +65,12 @@ oc create -f deploy/crds/cache_v1alpha1_memcached_cr.yaml
 ## verify
 ```sh
 oc get deployment 
+oc get pods
+oc get Memcached
+```
+
+# edit the spec.size of the deployed memcache and witness the pods changing
+```sh
+oc edit Memcached example-memchaced
+oc get pods -w
 ```
