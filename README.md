@@ -8,7 +8,7 @@ Generated project using
 operator-sdk new memcached-operator --type=ansible --api-version=cache.example.com/v1alpha1 --kind=Memcached --skip-git-init
 ```
 
-replaced generated role with existing role
+replaced generated role with existing role in ansible galaxy
 
 ```sh
 ansible-galaxy install dymurray.memcached_operator_role 
