@@ -6,6 +6,7 @@ Prerequisites
 Docker
 oc client
 Install operator-sdk - https://github.com/operator-framework/operator-sdk/blob/master/README.md
+OCP cluster with role that permits user to add CRDs
 
 Generated project using
 
@@ -69,8 +70,22 @@ oc get pods
 oc get Memcached
 ```
 
-# edit the spec.size of the deployed memcache and witness the pods changing
+## edit the spec.size of the deployed memcache and witness the pods changing
 ```sh
 oc edit Memcached example-memchaced
 oc get pods -w
+```
+
+## alternatively, the CR, cache_v1alpha1_memcached_cr.yaml , can be modified to update the number of instances and then re-applied to the namespace
+```sh
+oc apply -f deploy/crds/cache_v1alpha1_memcached_cr.yaml 
+``` 
+
+## To remove the deployed Memcached
+```sh
+oc delete -f deploy/crds/cache_v1alpha1_memcached_cr.yaml 
+```
+## To remove the memcached-operator
+```sh
+oc delete -f deploy/operator.yaml
 ```
