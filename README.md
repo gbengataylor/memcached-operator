@@ -2,6 +2,11 @@ instructions from
 
 https://learn.openshift.com/ansibleop/ansible-operator-overview/
 
+Prerequisites
+Docker
+oc client
+Install operator-sdk - https://github.com/operator-framework/operator-sdk/blob/master/README.md
+
 Generated project using
 
 ```sh
