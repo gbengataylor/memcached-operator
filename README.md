@@ -19,7 +19,7 @@ replaced generated role with existing role in ansible galaxy
 ansible-galaxy install dymurray.memcached_operator_role 
 ```
 
-The task in this role has the k8s definition of the Deployment. The watches.yaml file needs to be updated to watch this role
+The task in this role has the k8s definition of the memcache Deployment. The watches.yaml file needs to be updated to watch this role
 
 
 ## create CRD
